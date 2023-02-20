@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Generate RTF File</title>
+<style type="text/css">
+body {
+	font-family: Arial;
+}
+
+td, p, font, iframe {
+	font-family: Arial;
+}
+
+#editor {
+	border: 1px outset threedface;
+}
+
+#editor td {
+	background-color: threedface;
+	color: menutext;
+	cursor: Default;
+	font-family: MS Sans Serif;
+	font-size: 8pt;
+}
+
+#controls img.button {
+	padding: 1px;
+	background-color: buttonface;
+	border: 1px solid buttonface;
+}
+
+#controls img.buttonOn {
+	padding: 1px;
+	background-color: buttonhighlight;
+	border: 1px inset; 
+}
+
+#controls select {
+	margin: 4px 0;
+	font-family: MS Sans Serif;
+	font-size: 8pt;
+}
+</style>
+<script language="javascript1.2">
+var viewMode = 1; // WYSIWYG
+var statusBold = 0;
+var statusItalic = 0;
+var statusUnderline = 0;
+var statusStrike = 0;
+var statusBul = 0;
+var statusRule = 0;
+
+function Init() {
+	wysiwyg.document.designMode = 'On';
+}
+
+function buttonOver(ctrl) {
+	ctrl.style.cursor = 'Hand';
+}
+
+function buttonOut(ctrl) {
+	ctrl.style.cursor = 'Default';
+}
+
+function doBold(ctrl) {
+	if(statusBold) {
+		ctrl.className = 'button';
+		statusBold = 0;
+	}
+	else {
+		ctrl.className = 'buttonOn';
+		statusBold = 1;
+	}
+	wysiwyg.document.execCommand('bold', false, null);
+	wysiwyg.focus();
+}
+
+function doItalic(ctrl) {
+	if(statusItalic) {
+		ctrl.className = 'button';
+		statusItalic = 0;
+	}
+	else {
+		ctrl.className = 'buttonOn';
+		statusItalic = 1;
+	}
+	wysiwyg.document.execCommand('italic', false, null);
+	wysiwyg.focus();
+}
+
+function doUnderline(ctrl) {
+	if(statusUnderline) {
+		ctrl.className = 'button';
+		statusUnderline = 0;
+	}
+	else {
+		ctrl.className = 'buttonOn';
+		statusUnderline = 1;
+	}
+	wysiwyg.document.execCommand('underline', false, null);
+	wysiwyg.focus();
+}
+
+function doStrike(ctrl) {
+	if(statusStrike) {
+		ctrl.className = 'button';
+		statusStrike = 0;
+	}
+	else {
+		ctrl.className = 'buttonOn';
+		statusStrike = 1;
+	}
+	wysiwyg.document.execCommand('strikethrough', false, null);
+	wysiwyg.focus();
+}
+
+/*function doLeft() {
+    wysiwyg.document.execCommand('justifyleft', false, null);
+}
+
+function doCenter() {
+    wysiwyg.document.execCommand('justifycenter', false, null);
+}
+
+function doRight() {
+    wysiwyg.document.execCommand('justifyright', false, null);
+}*/
+
+function doBulList(ctrl) {
+	/*if(statusBul) {
+		ctrl.className = 'button';
+		statusBul = 0;
+	}
+	else {
+		ctrl.className = 'buttonOn';
+		statusBul = 1;
+	}*/
+	wysiwyg.document.execCommand('insertunorderedlist', false, null);
+	wysiwyg.focus();
+}
+  
+function doRule(ctrl) {
+	/*if(statusRule) {
+		ctrl.className = 'button';
+		statusRule = 0;
+	}
+	else {
+		ctrl.className = 'buttonOn';
+		statusRule = 1;
+	}*/
+	wysiwyg.document.execCommand('inserthorizontalrule', false, null);
+	wysiwyg.focus();
+}
+
+/*function doFont(fName) {
+	if(fName != '')
+	wysiwyg.document.execCommand('fontname', false, fName);
+}*/
+
+function doHead(hType) {
+	if(hType != '') {
+		wysiwyg.document.execCommand('formatblock', false, hType);  
+	}
+	wysiwyg.focus();
+}
+
+function doUndo() {
+	wysiwyg.document.execCommand('undo', false, null);
+	wysiwyg.focus();
+}
+
+function doRedo() {
+	wysiwyg.document.execCommand('redo', false, null);
+	wysiwyg.focus();
+}
+  
+function doToggleView() {  
+	if(viewMode == 1) {
+		iHTML = wysiwyg.document.body.innerHTML;
+		wysiwyg.document.body.innerText = iHTML;
+      
+		// Hide all controls
+		controls.style.display = 'none';
+		wysiwyg.focus();
+      
+		viewMode = 2; // Code
+	}
+	else {
+		wysiwygText = wysiwyg.document.body.innerText;
+		wysiwyg.document.body.innerHTML = wysiwygText;
+      
+		// Show all controls
+		controls.style.display = 'inline';
+		wysiwyg.focus();
+      
+		viewMode = 1; // WYSIWYG
+	}
+}
+
+function PostForm() {
+	var rtf = wysiwyg.document.body.innerHTML;
+	document.form.text.value = rtf;
+	return true; 
+} 
+</script>
+</head>
+
+<body onLoad="Init()">
+<form name="form" action="getrtf.php" method="POST" onSubmit="return PostForm()">
+<input type="hidden" name="text" value="" />
+<table id="editor" width="700" cellpadding="2" cellspacing="0" border="0">
+	<tr>
+		<td>
+		<table id="controls" width="100%" cellpadding="2" cellspacing="0" border="0">
+			<tr>
+				<td>
+				<select name="selHeading" onChange="doHead(this.options[this.selectedIndex].value)">
+					<option value="">Choose Heading</option>
+					<option value="Heading 1">Heading 1</option>
+					<option value="Heading 2">Heading 2</option>
+					<option value="Heading 3">Heading 3</option>
+					<option value="Normal">Body Text</option>
+				</select>
+				<img src="images/separator.gif" hspace="2" width="2" height="22" />
+				<img class="button" id="Bold" alt="Bold" src="images/bold.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doBold(this)" /> 
+				<img class="button" id="Italic" alt="Italic" src="images/italic.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doItalic(this)" /> 
+				<img class="button" id="Underline" alt="Underline" src="images/underline.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doUnderline(this)" /> 
+				<img class="button" id="Strike" alt="Strikethrough" src="images/strike.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doStrike(this)" />
+				<img src="images/separator.gif" hspace="2" width="2" height="22" />
+				<img class="button" id="Bul" alt="Unordered List" src="images/bullets.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doBulList(this)" /> 
+				<img class="button" id="Rule" alt="Horizontal Rule" src="images/hr.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doRule(this)" />
+				<img src="images/separator.gif" hspace="2" width="2" height="22" />
+				<img class="button" id="Undo" alt="Undo" src="images/undo.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doUndo(this)" /> 
+				<img class="button" id="Redo" alt="Redo" src="images/redo.gif" onMouseOut="buttonOut(this)" onMouseOver="buttonOver(this)" onClick="doRedo(this)" />
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<iframe id="wysiwyg" style="width: 700px; height:400px"></iframe>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input style="margin: 5px 0;" type="submit" value="Generate RTF File" />
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

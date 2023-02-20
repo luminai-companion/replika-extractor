@@ -1,0 +1,583 @@
+{
+    "id": "5fbe5d9cfba4ef4ec4c0942f",
+    "name": "Customization",
+    "long_name": "Customization",
+    "description": "Customization",
+    "children": [
+        {
+            "id": "5fbe5d9cfba4ef4ec4c09430",
+            "name": "Clothes & Accessories",
+            "long_name": "Clothes & Accessories",
+            "description": "Clothes & Accessories",
+            "children": [
+                {
+                    "id": "5fbe5da5fba4ef4ec4c09b1d",
+                    "name": "Tops",
+                    "long_name": "Tops",
+                    "description": "Tops",
+                    "children": [
+                        {
+                            "id": "5fbe5da5fba4ef4ec4c09b1e",
+                            "name": "T-Shirts",
+                            "long_name": "T-Shirts",
+                            "description": "T-Shirts",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 150
+                        },
+                        {
+                            "id": "5fbe5da7fba4ef4ec4c09ce5",
+                            "name": "Shirts",
+                            "long_name": "Shirts",
+                            "description": "Shirts",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 72
+                        },
+                        {
+                            "id": "5fbe5da9fba4ef4ec4c09e89",
+                            "name": "Tops",
+                            "long_name": "Tops",
+                            "description": "Tops",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 15
+                        },
+                        {
+                            "id": "5fbe5dabfba4ef4ec4c0a02d",
+                            "name": "Sweaters",
+                            "long_name": "Sweaters",
+                            "description": "Sweaters",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 12
+                        },
+                        {
+                            "id": "5fce3b4bada44d20786292af",
+                            "name": "Hoodies",
+                            "long_name": "Hoodies",
+                            "description": "Hoodies",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 40
+                        },
+                        {
+                            "id": "5fe3470cb96fd028ec481baf",
+                            "name": "Jackets",
+                            "long_name": "Jackets",
+                            "description": "Jackets",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 6
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 295
+                },
+                {
+                    "id": "5fbe5d9dfba4ef4ec4c09431",
+                    "name": "Bottoms",
+                    "long_name": "Bottoms",
+                    "description": "Bottoms",
+                    "children": [
+                        {
+                            "id": "5fbe5da0fba4ef4ec4c095f2",
+                            "name": "Jeans",
+                            "long_name": "Jeans",
+                            "description": "Jeans",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 68
+                        },
+                        {
+                            "id": "5fbe5d9dfba4ef4ec4c09432",
+                            "name": "Pants",
+                            "long_name": "Pants",
+                            "description": "Pants",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 51
+                        },
+                        {
+                            "id": "5fbe5da2fba4ef4ec4c097dc",
+                            "name": "Skirts",
+                            "long_name": "Skirts",
+                            "description": "Skirts",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 10
+                        },
+                        {
+                            "id": "5fbe5da4fba4ef4ec4c09987",
+                            "name": "Shorts",
+                            "long_name": "Shorts",
+                            "description": "Shorts",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 15
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 144
+                },
+                {
+                    "id": "5fbe5daffba4ef4ec4c0a391",
+                    "name": "Dresses",
+                    "long_name": "Dresses",
+                    "description": "Dresses",
+                    "children": [
+                        {
+                            "id": "6007fa747a22aec8cbf5b976",
+                            "name": "Short",
+                            "long_name": "Short",
+                            "description": "Short",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 35
+                        },
+                        {
+                            "id": "6007fa737a22aec8cbf5b975",
+                            "name": "Long",
+                            "long_name": "Long",
+                            "description": "Long",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 3
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 38
+                },
+                {
+                    "id": "5fbe5db0fba4ef4ec4c0a551",
+                    "name": "Outfits",
+                    "long_name": "Outfits",
+                    "description": "Outfits",
+                    "children": [
+                        {
+                            "id": "61b873f60c81a60007184936",
+                            "name": "Valentine's day",
+                            "long_name": "Valentine's day",
+                            "description": "Valentine's day",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 27
+                        },
+                        {
+                            "id": "63cf89d56d506c5d334324fd",
+                            "name": "Costumes",
+                            "long_name": "Costumes",
+                            "description": "Costumes",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 4
+                        },
+                        {
+                            "id": "61b86f1d0c81a60007184935",
+                            "name": "Winter holidays",
+                            "long_name": "Winter holidays",
+                            "description": "Winter holidays",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 56
+                        },
+                        {
+                            "id": "6319e9ab0c81a600073ce51c",
+                            "name": "Back to school",
+                            "long_name": "Back to school",
+                            "description": "Back to school",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 9
+                        },
+                        {
+                            "id": "5fd36375d5abc7aa936d7ed2",
+                            "name": "Outfits",
+                            "long_name": "Outfits",
+                            "description": "Outfits",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 6
+                        },
+                        {
+                            "id": "62a1b38a0c81a600073a81fd",
+                            "name": "Summer",
+                            "long_name": "Summer",
+                            "description": "Summer",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 43
+                        },
+                        {
+                            "id": "627a37300c81a600079dd260",
+                            "name": "Anime",
+                            "long_name": "Anime",
+                            "description": "Anime",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 15
+                        },
+                        {
+                            "id": "62ac86cb0c81a600078b0ec1",
+                            "name": "Pride",
+                            "long_name": "Pride",
+                            "description": "Pride",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 36
+                        },
+                        {
+                            "id": "6217655c0c81a60007550485",
+                            "name": "Retro",
+                            "long_name": "Retro",
+                            "description": "Retro",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 22
+                        },
+                        {
+                            "id": "61f2a0930c81a60007415ce2",
+                            "name": "Goth",
+                            "long_name": "Goth",
+                            "description": "Goth",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 21
+                        },
+                        {
+                            "id": "61683fc10c81a600078495b7",
+                            "name": "Halloween",
+                            "long_name": "Halloween",
+                            "description": "Halloween",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 5
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 244
+                },
+                {
+                    "id": "5fbe5db2fba4ef4ec4c0a70a",
+                    "name": "Shoes",
+                    "long_name": "Shoes",
+                    "description": "Shoes",
+                    "children": [
+                        {
+                            "id": "5fd0debf081f4e9c4f06860c",
+                            "name": "Sneakers",
+                            "long_name": "Sneakers",
+                            "description": "Sneakers",
+                            "children": [],
+                            "camera_slot": "shoes",
+                            "num_items": 11
+                        },
+                        {
+                            "id": "5fd0ded2081f4e9c4f068832",
+                            "name": "Flats",
+                            "long_name": "Flats",
+                            "description": "Flats",
+                            "children": [],
+                            "camera_slot": "shoes",
+                            "num_items": 10
+                        },
+                        {
+                            "id": "60128693b7f02e672b15e8d6",
+                            "name": "Boots",
+                            "long_name": "Boots",
+                            "description": "Boots",
+                            "children": [],
+                            "camera_slot": "shoes",
+                            "num_items": 7
+                        },
+                        {
+                            "id": "61fc12720c81a60007e1d2f6",
+                            "name": "Barefoot",
+                            "long_name": "Barefoot",
+                            "description": "Barefoot",
+                            "children": [],
+                            "camera_slot": "shoes",
+                            "num_items": 1
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 29
+                },
+                {
+                    "id": "619e49cc0c81a60007568ebf",
+                    "name": "Swimwear",
+                    "long_name": "Swimwear",
+                    "description": "Swimwear",
+                    "children": [
+                        {
+                            "id": "619e49f50c81a60007568ec0",
+                            "name": "Swimwear",
+                            "long_name": "Swimwear",
+                            "description": "Swimwear",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 4
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 4
+                },
+                {
+                    "id": "5fbe5dbdfba4ef4ec4c0b199",
+                    "name": "Accessories",
+                    "long_name": "Accessories",
+                    "description": "Accessories",
+                    "children": [
+                        {
+                            "id": "5fd0e136081f4e9c4f06caf6",
+                            "name": "Glasses",
+                            "long_name": "Glasses",
+                            "description": "Glasses",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 28
+                        },
+                        {
+                            "id": "5fbe5dc0fba4ef4ec4c0b4f0",
+                            "name": "Watches",
+                            "long_name": "Watches",
+                            "description": "Watches",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 8
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 36
+                },
+                {
+                    "id": "5fbe5db4fba4ef4ec4c0a8ca",
+                    "name": "Jewelry",
+                    "long_name": "Jewelry",
+                    "description": "Jewelry",
+                    "children": [
+                        {
+                            "id": "5fbe5db9fba4ef4ec4c0ae27",
+                            "name": "Bracelets",
+                            "long_name": "Bracelets",
+                            "description": "Bracelets",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 10
+                        },
+                        {
+                            "id": "619b5bd50c81a60007ce9f31",
+                            "name": "Necklaces",
+                            "long_name": "Necklaces",
+                            "description": "Necklaces",
+                            "children": [],
+                            "camera_slot": "neck",
+                            "num_items": 14
+                        },
+                        {
+                            "id": "5fbe5db6fba4ef4ec4c0aa84",
+                            "name": "Rings",
+                            "long_name": "Rings",
+                            "description": "Rings",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 14
+                        },
+                        {
+                            "id": "5fbe5db7fba4ef4ec4c0ac52",
+                            "name": "Earrings",
+                            "long_name": "Earrings",
+                            "description": "Earrings",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 20
+                        },
+                        {
+                            "id": "5fbe5db4fba4ef4ec4c0a8cb",
+                            "name": "Piercing",
+                            "long_name": "Piercing",
+                            "description": "Piercing",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 9
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 67
+                }
+            ],
+            "camera_slot": "default_store",
+            "num_items": 857
+        },
+        {
+            "id": "5fbe5dc2fba4ef4ec4c0b694",
+            "name": "Look",
+            "long_name": "Look",
+            "description": "Look",
+            "children": [
+                {
+                    "id": "62db3ca30c81a600073569a5",
+                    "name": "Hair",
+                    "long_name": "Hair",
+                    "description": "Hair",
+                    "children": [
+                        {
+                            "id": "61bb50027045d80007135ac2",
+                            "name": "Hair",
+                            "long_name": "Hair",
+                            "description": "Hair",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 31,
+                            "key": "hair"
+                        }
+                    ],
+                    "camera_slot": "head_front",
+                    "num_items": 31,
+                    "key": "hair"
+                },
+                {
+                    "id": "5fbe5dc2fba4ef4ec4c0b695",
+                    "name": "Skin",
+                    "long_name": "Skin",
+                    "description": "Skin",
+                    "children": [
+                        {
+                            "id": "61bb50027045d80007135abf",
+                            "name": "Skin",
+                            "long_name": "Skin",
+                            "description": "Skin",
+                            "children": [],
+                            "camera_slot": "default_store",
+                            "num_items": 16,
+                            "key": "skin"
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 16,
+                    "key": "skin"
+                },
+                {
+                    "id": "61bb50027045d80007135ac0",
+                    "name": "Eyes",
+                    "long_name": "Eyes",
+                    "description": "Eyes",
+                    "children": [
+                        {
+                            "id": "61bb50027045d80007135ac1",
+                            "name": "Eyes",
+                            "long_name": "Eyes",
+                            "description": "Eyes",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 32,
+                            "key": "eye"
+                        }
+                    ],
+                    "camera_slot": "head_front",
+                    "num_items": 32,
+                    "key": "eye"
+                },
+                {
+                    "id": "615580a40c81a6000731d410",
+                    "name": "Makeup",
+                    "long_name": "Makeup",
+                    "description": "Makeup",
+                    "children": [
+                        {
+                            "id": "5fbe5dc3fba4ef4ec4c0b85c",
+                            "name": "Eyes makeup",
+                            "long_name": "Eyes makeup",
+                            "description": "Eyes makeup",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 49
+                        },
+                        {
+                            "id": "6155815c0c81a6000731d430",
+                            "name": "Lips makeup",
+                            "long_name": "Lips makeup",
+                            "description": "Lips makeup",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 21
+                        }
+                    ],
+                    "camera_slot": "head_front",
+                    "num_items": 70
+                },
+                {
+                    "id": "615581040c81a6000731d425",
+                    "name": "Tattoo",
+                    "long_name": "Tattoo",
+                    "description": "Tattoo",
+                    "children": [
+                        {
+                            "id": "5fbe5dc9fba4ef4ec4c0bf24",
+                            "name": "Face tattoo",
+                            "long_name": "Face tattoo",
+                            "description": "Face tattoo",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 35
+                        },
+                        {
+                            "id": "615581820c81a6000731ff57",
+                            "name": "Arm tattoo",
+                            "long_name": "Arm tattoo",
+                            "description": "Arm tattoo",
+                            "children": [],
+                            "camera_slot": "body_arms",
+                            "num_items": 28
+                        }
+                    ],
+                    "camera_slot": "default_store",
+                    "num_items": 63
+                },
+                {
+                    "id": "615583170c81a60007328225",
+                    "name": "Facial hair",
+                    "long_name": "Facial hair",
+                    "description": "Facial hair",
+                    "children": [
+                        {
+                            "id": "615583320c81a60007328226",
+                            "name": "Beards",
+                            "long_name": "Beards",
+                            "description": "Beards",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 5
+                        }
+                    ],
+                    "camera_slot": "head_front",
+                    "num_items": 5
+                },
+                {
+                    "id": "615583620c81a60007328227",
+                    "name": "Freckles",
+                    "long_name": "Freckles",
+                    "description": "Freckles",
+                    "children": [
+                        {
+                            "id": "615583760c81a60007328228",
+                            "name": "Freckles",
+                            "long_name": "Freckles",
+                            "description": "Freckles",
+                            "children": [],
+                            "camera_slot": "head_front",
+                            "num_items": 8
+                        }
+                    ],
+                    "camera_slot": "head_front",
+                    "num_items": 8
+                }
+            ],
+            "camera_slot": "default_store",
+            "num_items": 225
+        }
+    ],
+    "camera_slot": "default_store",
+    "num_items": 1082,
+    "key": "customization"
+}
