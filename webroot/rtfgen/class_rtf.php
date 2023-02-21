@@ -309,6 +309,15 @@ class rtf {
 			$doc_buffer = str_replace("</UL>", "", $doc_buffer);
 			$doc_buffer = preg_replace("/<LI>(.*?)<\/LI>/mi", "\\f3\\'B7\\tab\\f{$this->font_face} \\1\\par", $doc_buffer);
 		}
+		$doc_buffer = preg_replace("/<upvote>/mi", "\\u-10179?\\u-9139?", $doc_buffer);
+		$doc_buffer = preg_replace("/<downvote>/mi", "\\u-10179?\\u-9138?", $doc_buffer);
+		$doc_buffer = preg_replace("/<offensive>/mi", "\\u-10179?\\u-8660?", $doc_buffer);
+		$doc_buffer = preg_replace("/<meaningless>/mi", "\\u-10179?\\u-8688?", $doc_buffer);
+		$doc_buffer = preg_replace("/<love>/mi", "\\u-10179?\\u-8691?", $doc_buffer);
+		$doc_buffer = preg_replace("/<funny>/mi", "\\u-10179?\\u-8701?", $doc_buffer);
+		$doc_buffer = preg_replace("/<u-(.*?)>/mi", "\\u-\\1?", $doc_buffer);
+		
+
 		
 		$doc_buffer = preg_replace("/<cf (.*?)>(.*?)<\/cf>/mi", "\\cf\\1\\2\\cf0", $doc_buffer);
 		$doc_buffer = preg_replace("/<P>(.*?)<\/P>/mi", "\\1\\par ", $doc_buffer);

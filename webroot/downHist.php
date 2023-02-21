@@ -46,7 +46,10 @@ function analyzerow($text,$line=0){
 			$prevcharacter = $text[($i-1)];
 		}
 		$character = $text[$i];
-		//echo "$character = ".chr(ord($character))." ".ord($character)."<br>";
+			if($line == 10){
+				echo "Bad character: $character with ".ord($character)." on line $line<br>\n";
+				echo "$character = ".chr(ord($character))." ".ord($character)."<br>";
+			}
 			$escaped = "";
 			if(ord($character = 226)){
 				$character = "";
@@ -68,10 +71,9 @@ function analyzerow($text,$line=0){
 				$escaped = $character;
 			
 			if (ord($character) >= 0x80 and ord($character) < 0xFF){
-				//echo "Bad character: $character with ".ord($character)." on line $line<br>\n";
+				echo "Bad character: $character with ".ord($character)." on line $line<br>\n";
 				$escaped = "\\'".dechex(ord($character));
 			}
-
 			switch(ord($character)) {
 				case 0x5C:
 				case 0x7B:
@@ -86,6 +88,14 @@ function analyzerow($text,$line=0){
 	}
 	return $text_buffer;
 }
+function rowWithEmoji($text, $line){
+	echo $line.". ".$text."<br>\n";
+	for($i=0;$i<strlen($text);$i++){
+		$character = $text[$i];
+		echo "$character = ".chr(ord($character))." ".ord($character)."<br>\n";
+	}
+}
+
 
 if($downloadCensorship){
 	$user_name = "{{user_first_name}}";
@@ -107,12 +117,10 @@ if($downloadType == "rtf"){
 		'"',
 		'"',
 	);
-	$emojis = array(
-		chr(240).chr(159).chr(146).chr(176),
-		
-
-	);
-	$emoji = array();
+	$emojiReplace = array();
+	$emojiReplace[chr(226).chr(152).chr(186).chr(239).chr(184).chr(143)] = "<u-9786><u-497>";
+	include("emojiReplace.php");
+	
 	//print_r($badChars);
 	$rtf->setPaperSize(5);
 	$rtf->setPaperOrientation(1);
@@ -150,11 +158,12 @@ for($line=0;$row = db_fetch_assoc($q);$line++){
 	if($downloadType == "rtf"){
 		
 		$textToAdd = str_replace($badChars,$goodChars,$textToAdd);
+		$textToAdd = str_replace(array_keys($emojiReplace),array_values($emojiReplace),$textToAdd);
 		
 		if(strtolower(mb_detect_encoding($row['Chat_Text'])) == "utf-8"){
-			//echo $line."<br>"; 
-			//$row['Chat_Text'] = analyzerow($row['Chat_Text'],$line);
-			//echo "====<br>";
+			//echo $line."<br>\n"; 
+			//rowWithEmoji($row['Chat_Text'],$line);
+			//echo "====<br>\n";
 		}
 		
 		if($row['Chat_From'] == "bot"){
@@ -167,8 +176,20 @@ for($line=0;$row = db_fetch_assoc($q);$line++){
 		}
 		
 		$rtf->addText("<p>[".$row['Chat_Timestamp']."] ");
+		if($row['Chat_Reaction'] != ""){
+			switch(strtolower($row['Chat_Reaction'])){
+				case "upvote": $rtf->addText("<upvote> "); break;
+				case "downvote": $rtf->addText("<downvote> "); break;
+				case "offensive": $rtf->addText("<offensive> "); break;
+				case "meaningless": $rtf->addText("<meaningless> "); break;
+				case "love": $rtf->addText("<love> "); break;
+				case "funny": $rtf->addText("<funny> "); break;
+			}
+		}
 
 		$rtf->addText("<cf $usercolor><b>".$userfrom.": </b></cf>");
+		
+		
 		$rtf->addText($textToAdd);
 		$rtf->addText("</p>");
 	}
